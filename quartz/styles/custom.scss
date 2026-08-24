@@ -1,0 +1,44 @@
+@use "./base.scss";
+
+@media all and (min-width: 1200px) {
+  #quartz-body {
+    grid-template-columns:
+      [grid-start] minmax(1rem, 1fr) [sidebar-left] minmax(13rem, 16rem)
+      [sidebar-left-end] minmax(1.25rem, 2vw) [center] minmax(0, 54rem) [center-end] minmax(
+        1.25rem,
+        2vw
+      )
+      [sidebar-right] minmax(16rem, 20rem) [sidebar-right-end] minmax(1rem, 1fr) [grid-end];
+  }
+}
+
+article {
+  line-height: 1.85;
+}
+article > h1,
+article > h2,
+article > h3 {
+  letter-spacing: -0.025em;
+}
+article blockquote {
+  border-left-color: var(--tertiary);
+  background: color-mix(in srgb, var(--highlight) 72%, transparent);
+  border-radius: 0 0.6rem 0.6rem 0;
+  padding: 0.5rem 1rem;
+}
+.graph > .graph-outer {
+  border: 1px solid var(--lightgray);
+  border-radius: 0.75rem;
+  padding: 0.4rem;
+}
+
+@media all and (max-width: 800px) {
+  article {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  article table {
+    display: block;
+    overflow-x: auto;
+  }
+}
